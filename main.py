@@ -8,7 +8,6 @@ from rdflib import Graph, Namespace, Literal, RDF, RDFS, URIRef
 from rdflib.namespace import XSD, FOAF
 import streamlit as st
 import pandas as pd
-import mysql.connector
 import os
 
 # -----------------------------

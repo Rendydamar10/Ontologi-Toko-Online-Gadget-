@@ -1,0 +1,84 @@
+@prefix ex: <http://example.org/gadgetstore#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Brand a rdfs:Class .
+
+ex:Category a rdfs:Class .
+
+ex:Customer a rdfs:Class .
+
+ex:Order a rdfs:Class .
+
+ex:Product a rdfs:Class .
+
+<http://example.org/gadgetstore#1234#inv> a ex:Order ;
+    ex:hasDate "12-12-2025"^^xsd:date ;
+    ex:orderContains ex:IP15 ;
+    ex:purchasedBy ex:202251249 ;
+    ex:totalPrice 5000.0 .
+
+ex:AsusExpertBook a ex:Product ;
+    rdfs:label "Asus Expertbook 14"^^xsd:string ;
+    ex:belongsToCategory ex:Laptop ;
+    ex:hasBrand ex:Asus .
+
+ex:Emas a ex:Brand .
+
+<http://example.org/gadgetstore#INV#123> a ex:Order ;
+    ex:hasDate "02-19-2009"^^xsd:date ;
+    ex:purchasedBy ex:202251249 ;
+    ex:totalPrice 5000.0 .
+
+<http://example.org/gadgetstore#SM#123> a ex:Product ;
+    rdfs:label "SAmsung J2 Prime"^^xsd:string ;
+    ex:belongsToCategory ex:Smartphone ;
+    ex:hasBrand ex:Samsung .
+
+ex:Super a ex:Brand .
+
+ex:belongsToCategory a rdf:Property .
+
+ex:hasBrand a rdf:Property .
+
+ex:hasDate a rdf:Property .
+
+ex:hasPrice a rdf:Property .
+
+ex:orderContains a rdf:Property .
+
+ex:purchasedBy a rdf:Property .
+
+ex:totalPrice a rdf:Property .
+
+ex:tttt a ex:Order ;
+    ex:hasDate "12-21-2021"^^xsd:date ;
+    ex:orderContains ex:iPhone15 ;
+    ex:purchasedBy ex:202251249 ;
+    ex:totalPrice 6000.0 .
+
+ex:Asus a ex:Brand .
+
+ex:IP15 a ex:Product ;
+    rdfs:label "iPhone15"^^xsd:string ;
+    ex:belongsToCategory ex:Smartphone ;
+    ex:hasBrand ex:iPhone .
+
+ex:Laptop a ex:Category .
+
+ex:Samsung a ex:Brand .
+
+ex:iPhone15 a ex:Product ;
+    rdfs:label "iPhone 15"^^xsd:string ;
+    ex:belongsToCategory ex:Smartphone ;
+    ex:hasBrand ex:iPhone .
+
+ex:iPhone a ex:Brand .
+
+ex:202251249 a ex:Customer ;
+    foaf:name "REndoolll"^^xsd:string .
+
+ex:Smartphone a ex:Category .
+
